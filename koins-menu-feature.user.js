@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Koins Menu Feature
 // @namespace    https://dev.1024.info/
-// @version      0.2
+// @version      0.3
 // @description  Customize menu in studio.
 // @author       Kasper
 // @match        https://dev.1024.info/*
@@ -75,7 +75,6 @@ const KEY_EDIT_TRIGGER = 69;
 
   $(window).keydown(function (event)
   {
-    console.log(event.which);
     if (event.which === KEY_EDIT_TRIGGER && !is_edit_mode)
     {
       is_edit_mode = true;
@@ -98,7 +97,6 @@ const KEY_EDIT_TRIGGER = 69;
 
   function normilizeMenu()
   {
-    console.log('normalize');
     jq_menu.find('> ul > li').each(function ()
     {
       var jq_item_list = $(this).find('> ul > li');
